@@ -573,7 +573,7 @@
           var nodes = scope.childNodes();
           for (var i = 0; i < nodes.length; i++) {
             var childNodes = nodes[i].$childNodesScope;
-            if (childNodes) {
+            if (childNodes && childNodes.childNodesCount() > 0) {
               count = 1;
               countSubDepth(childNodes);
             }
